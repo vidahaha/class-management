@@ -1,0 +1,85 @@
+.App {
+  
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 60px;
+}
+
+.App-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #24292e;
+  height: 60px;
+  color: #ddd;
+}
+
+.App-title {
+  display: inline-block;
+  letter-spacing: 0.5em;
+}
+
+.App-login {
+  margin-right: 20px;
+  font-size: 20px;
+}
+/* --------------------------- main --------------------------------- */
+.App-intro {
+  text-align: center;
+}
+
+.intro-head {
+  background-color: #2f363d;
+  height: 350px;
+  color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.head-info-1 {
+  background-color: #bb6616;  
+  width: 24%;
+  height: 320px;
+  border-radius: 5px;
+}
+
+.head-info-1, .head-info-2, .head-info-3 {
+  cursor: pointer;
+}
+
+.head-info-2 {
+
+  background-color: #275783;  
+  width: 48%;
+  height: 320px;
+  border-radius: 5px;  
+}
+
+.head-info-3 {
+
+  background-color: #217042;  
+  width: 24%;
+  height: 320px;
+  border-radius: 5px;  
+}
+
+.intro-main {
+  background-color: rgb(242, 242, 243);
+  height: 300px;
+}
+/* ------------------------------------------------------------- */
+.App-footer {
+  background-color: #222;
+  height: 50px;
+  padding: 20px;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
