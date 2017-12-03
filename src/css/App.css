@@ -41,10 +41,14 @@
 }
 
 .head-info-1 {
-  background-color: #bb6616;  
+  background-color: #bd6d23;  
   width: 24%;
   height: 320px;
   border-radius: 5px;
+}
+
+.head-info-1:hover {
+  background-color: #f5861f;    
 }
 
 .head-info-1, .head-info-2, .head-info-3 {
@@ -52,19 +56,25 @@
 }
 
 .head-info-2 {
-
   background-color: #275783;  
   width: 48%;
   height: 320px;
   border-radius: 5px;  
 }
 
-.head-info-3 {
+.head-info-2:hover {
+  background-color: #387fb9;    
+}
 
-  background-color: #217042;  
+.head-info-3 {
+  background-color: #27862a;  
   width: 24%;
   height: 320px;
   border-radius: 5px;  
+}
+
+.head-info-3:hover {
+  background-color: rgb(50, 172, 50);    
 }
 
 .intro-main {
