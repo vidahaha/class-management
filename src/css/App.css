@@ -47,9 +47,6 @@
   border-radius: 5px;
 }
 
-.head-info-1:hover {
-  background-color: #f5861f;    
-}
 
 .head-info-1, .head-info-2, .head-info-3 {
   cursor: pointer;

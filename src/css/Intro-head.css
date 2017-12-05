@@ -1,0 +1,23 @@
+@keyframes infoLager {
+	from {background-color: #bd6d23;}
+	to {background-color: #f5861f;}
+}
+
+@keyframes infoRestore {
+	from {background-color: #f5861f;}
+	to {background-color: #bd6d23;}
+}
+
+.info-lager {
+	animation-name: infoLager;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+.info-restore {
+	animation-name: infoRestore;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
