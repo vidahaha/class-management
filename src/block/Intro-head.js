@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import '../css/Intro-head.css'
+import './Intro-head.css'
 
 class HeadInfo extends Component {
 
@@ -10,12 +10,14 @@ class HeadInfo extends Component {
 			isMouseOut: false,
 			isMouseOver: false,
 		};
+		this.defultClass = [
+			`head-info-${this.props.index}`,
+			`info-lager-${this.props.index}`,
+			`info-restore-${this.props.index}`,			
+		];
 	}
 
 	largerImg = ( event ) => {
-		let self = event.target;
-		let currentWidth = getComputedStyle(self).width;
-		self.style.width = (parseInt(currentWidth, 10) * 1.05) + 'px';
 		this.setState({
 			isMouseOver: true,
 			isMouseOut: false,
@@ -23,9 +25,6 @@ class HeadInfo extends Component {
 	};
 	
 	restoreImg = ( event ) => {
-		let self = event.target;
-		let currentWidth = getComputedStyle(self).width;
-		self.style.width = (parseInt(currentWidth, 10) / 1.05) + 'px';
 		this.setState({
 			isMouseOver: false,
 			isMouseOut: true,
@@ -33,16 +32,16 @@ class HeadInfo extends Component {
 	};
 
 	render() {
-
+		const defultClass = this.defultClass;
 		const headInfoClass = classNames({
-			'head-info-1': true,
-			'info-lager': this.state.isMouseOver,
-			'info-restore': this.state.isMouseOut,			
+			[defultClass[0]]: true,
+			[defultClass[1]]: this.state.isMouseOver,
+			[defultClass[2]]: this.state.isMouseOut,			
 		});
-
+		console.log( headInfoClass )
 		return (
 			<div className={headInfoClass} onMouseOver={this.largerImg} onMouseOut={this.restoreImg}>
-			查看个人信息
+				<p>{this.props.children}</p>
 			</div>
 		);
 	}

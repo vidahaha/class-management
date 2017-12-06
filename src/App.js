@@ -16,13 +16,9 @@ class App extends Component {
         </header>
         <div className="App-intro">
           <div className="intro-head">
-            <HeadInfo></HeadInfo>
-            <div className="head-info-2" onClick={this.largerImg}>
-            查看班级成员
-            </div>
-            <div className="head-info-3" onClick={this.largerImg}>
-            查看已开课程
-            </div>
+            <HeadInfo index={1}>查看个人信息</HeadInfo>
+            <HeadInfo index={2}>查看班级成员</HeadInfo>
+            <HeadInfo index={3}>查看个人信息</HeadInfo>
          </div>
           <div className="intro-main">
 
