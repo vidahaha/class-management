@@ -38,12 +38,14 @@
 
 @keyframes infoLager_2 {
 	from {
-		background-color: #275783;  
+		background-color: #275783; 
+		color: #ccc; 
 	}
 	to {
-	background-color: #387fb9;       
+		background-color: #387fb9;       
 		width: 49%;
 		height: 330px;
+		color: #fff;
 	}
 }
 
@@ -51,12 +53,14 @@
 	from {
 		background-color: #387fb9; 
 		width: 49%;		
-		height: 330px;		
+		height: 330px;
+		color: #fff;		
 	}
 	to {
 		background-color: #275783;  
 		width: 48%;
 		height: 320px;
+		color: #ccc;
 	}
 }
 

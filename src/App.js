@@ -18,7 +18,7 @@ class App extends Component {
           <div className="intro-head">
             <HeadInfo index={1}>查看个人信息</HeadInfo>
             <HeadInfo index={2}>查看班级成员</HeadInfo>
-            <HeadInfo index={3}>查看个人信息</HeadInfo>
+            <HeadInfo index={3}>查看已开课程</HeadInfo>
          </div>
           <div className="intro-main">
 

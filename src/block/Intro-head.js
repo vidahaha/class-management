@@ -16,7 +16,7 @@ class HeadInfo extends Component {
 			`info-lager-${this.props.index}`,
 			`info-restore-${this.props.index}`,			
 		];
-		axios.get('home.do?studentId=2014317200401').then(( res ) => {
+		axios.get('data.json').then(( res ) => {
 			console.log( res );
 		}).catch(( err ) => {
 			console.log( err );
