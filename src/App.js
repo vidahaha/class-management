@@ -31,7 +31,22 @@ class App extends Component {
             </HeadInfo>
          </div>
           <div className="intro-main">
-
+            <div className="main-info">
+              <h3>介绍</h3>
+              <p>此系统使用React + JavaBean + Servlet实现对一班、二班学生
+                信息数据库的集成。达到在不修改后台数据库访问代码的前提下，前
+                台界面通过不同的账号登录进入系统后，可查询对应的相关学生信息
+                的效果。
+              </p>
+            </div>
+            <div className="main-support">
+              <h3>介绍</h3>
+              <p>此系统使用React + JavaBean + Servlet实现对一班、二班学生
+                信息数据库的集成。达到在不修改后台数据库访问代码的前提下，前
+                台界面通过不同的账号登录进入系统后，可查询对应的相关学生信息
+                的效果。
+              </p>
+            </div>
           </div>
         </div>
         <footer className="App-footer">

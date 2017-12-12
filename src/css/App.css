@@ -62,7 +62,19 @@
 
 .intro-main {
   background-color: rgb(242, 242, 243);
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-info {
+  width: 30%;
   height: 300px;
+  margin-left: 10%;
+}
+.main-support {
+  width: 30%;
+  height: 300px;
+  margin-right: 10%;  
 }
 /* ------------------------------------------------------------- */
 .App-footer {
