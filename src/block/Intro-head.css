@@ -1,26 +1,4 @@
-@keyframes infoLager_1 {
-	from {
-		background-color: #bd6d23;
-	}
-	to {
-		background-color: #f5861f;
-		width: 25%;
-		height: 330px;
-	}
-}
-
-@keyframes infoRestore_1 {
-	from {
-		background-color: #f5861f;
-		width: 25%;		
-		height: 330px;		
-	}
-	to {
-		background-color: #bd6d23;
-		width: 24%;		
-		height: 320px;
-	}
-}
+@import '../css/animation.css';
 
 .info-lager-1 {
 	animation-name: infoLager_1;
@@ -36,34 +14,6 @@
 	animation-fill-mode: forwards;
 }
 
-@keyframes infoLager_2 {
-	from {
-		background-color: #275783; 
-		color: #ccc; 
-	}
-	to {
-		background-color: #387fb9;       
-		width: 49%;
-		height: 330px;
-		color: #fff;
-	}
-}
-
-@keyframes infoRestore_2 {
-	from {
-		background-color: #387fb9; 
-		width: 49%;		
-		height: 330px;
-		color: #fff;		
-	}
-	to {
-		background-color: #275783;  
-		width: 48%;
-		height: 320px;
-		color: #ccc;
-	}
-}
-
 .info-lager-2 {
 	animation-name: infoLager_2;
 	animation-duration: 0.5s;
@@ -76,30 +26,6 @@
 	animation-duration: 0.5s;
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
-}
-
-@keyframes infoLager_3 {
-	from {
-	background-color: #27862a; 
-	}
-	to {
-		background-color: rgb(50, 172, 50);    
-		width: 25%;
-		height: 330px;
-	}
-}
-
-@keyframes infoRestore_3 {
-	from {
-		background-color: rgb(50, 172, 50);    
-		width: 25%;		
-		height: 330px;		
-	}
-	to {
-		background-color: #27862a; 
-		width: 24%;		
-		height: 320px;
-	}
 }
 
 .info-lager-3 {
@@ -121,24 +47,24 @@
 	width: 24%;
 	height: 320px;
 	border-radius: 5px;
-  }
+}
   
   
 .head-info-1, .head-info-2, .head-info-3 {
-cursor: pointer;
+	cursor: pointer;
 }
 
 .head-info-2 {
-background-color: #275783;  
-width: 48%;
-height: 320px;
-border-radius: 5px;  
+	background-color: #275783;  
+	width: 48%;
+	height: 320px;
+	border-radius: 5px;  
 }
 
 .head-info-3 {
-background-color: #27862a;  
-width: 24%;
-height: 320px;
-border-radius: 5px;  
+	background-color: #27862a;  
+	width: 24%;
+	height: 320px;
+	border-radius: 5px;  
 }
   

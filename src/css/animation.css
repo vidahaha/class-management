@@ -1,0 +1,83 @@
+@keyframes infoLager_1 {
+	from {
+		background-color: #bd6d23;
+		color: #ccc; 
+	}
+	to {
+		background-color: #f5861f;
+		width: 25%;
+		height: 330px;
+		color: #fff; 
+	}
+}
+
+@keyframes infoRestore_1 {
+	from {
+		background-color: #f5861f;
+		width: 25%;		
+		height: 330px;	
+		color: #fff; 		
+	}
+	to {
+		background-color: #bd6d23;
+		width: 24%;		
+		height: 320px;
+		color: #ccc; 		
+	}
+}
+
+@keyframes infoLager_2 {
+	from {
+		background-color: #275783; 
+		color: #ccc; 
+	}
+	to {
+		background-color: #387fb9;       
+		width: 49%;
+		height: 330px;
+		color: #fff;
+	}
+}
+
+@keyframes infoRestore_2 {
+	from {
+		background-color: #387fb9; 
+		width: 49%;		
+		height: 330px;
+		color: #fff;		
+	}
+	to {
+		background-color: #275783;  
+		width: 48%;
+		height: 320px;
+		color: #ccc;
+	}
+}
+
+@keyframes infoLager_3 {
+	from {
+	background-color: #27862a; 
+	color: #ccc; 
+	}
+	to {
+		background-color: rgb(50, 172, 50);    
+		width: 25%;
+		height: 330px;
+		color: #fff; 
+	}
+}
+
+@keyframes infoRestore_3 {
+	from {
+		background-color: rgb(50, 172, 50);    
+		width: 25%;		
+		height: 330px;
+		color: #fff; 		
+	}
+	to {
+		background-color: #27862a; 
+		width: 24%;		
+		height: 320px;
+		color: #ccc; 
+	}
+}

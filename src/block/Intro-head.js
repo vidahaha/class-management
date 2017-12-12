@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import axios from 'axios';
-import './Intro-head.css'
+import './Intro-head.css';
 
 class HeadInfo extends Component {
 
