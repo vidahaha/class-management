@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import axios from 'axios';
 import './Intro-head.css';
 
 class HeadInfo extends Component {
@@ -16,11 +15,6 @@ class HeadInfo extends Component {
 			`info-lager-${this.props.index}`,
 			`info-restore-${this.props.index}`,			
 		];
-		axios.get('data.json').then(( res ) => {
-			console.log( res );
-		}).catch(( err ) => {
-			console.log( err );
-		});
 	}
 
 	largerImg = ( event ) => {

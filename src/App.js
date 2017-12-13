@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import HeadInfo from './block/Intro-head';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import './css/App.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    axios.get('data.json').then(( res ) => {
+      console.log( res );
+    }).catch(( err ) => {
+      console.log( err );
+    });
+  }
   
   render() {
     return (
@@ -61,6 +71,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;

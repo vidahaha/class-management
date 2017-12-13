@@ -4,5 +4,21 @@
 		"totalCount": 30,
 		"maleCount": 24,
 		"femaleCount": 6
+	},
+	"person" : {
+		"name": "黄穗宇",
+		"studentId": "2015317200501",
+		"qq": "937634115",
+		"grade": {
+			"c": 83,
+			"java": 90,
+			"dataBase": 86,
+			"c++": 85,
+			"dataStructures": 93,
+			"algorithm": 89,
+			"operateSystem": 96,
+			"composition": 71,
+			"network": 87
+		}
 	}
 }

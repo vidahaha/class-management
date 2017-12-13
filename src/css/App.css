@@ -62,7 +62,7 @@
 
 .intro-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
@@ -81,12 +81,12 @@ h3 {
 .main-info {
   width: 30%;
   height: 300px;
-  margin-left: 10%;
+  /* margin-left: 10%; */
 }
 .main-support {
   width: 30%;
   height: 300px;
-  margin-right: 10%;  
+  /* margin-right: 10%;   */
 }
 /* ------------------------------------------------------------- */
 .App-footer {
