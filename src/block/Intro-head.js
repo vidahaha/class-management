@@ -40,7 +40,7 @@ class HeadInfo extends Component {
 		});
 		return (
 			<div className={headInfoClass} onMouseOver={this.largerImg} onMouseOut={this.restoreImg}>
-				<p>{this.props.children}</p>
+				<div style={{marginTop:'16px'}} >{this.props.children}</div>
 			</div>
 		);
 	}

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import HeadInfo from './block/Intro-head';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import {getLen} from './util/getLength'
 
 import './css/App.css';
 
@@ -10,8 +11,12 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    this.data = {};
+    this.data.person = {};
     axios.get('data.json').then(( res ) => {
-      console.log( res );
+      res = res.data;
+      console.log( getLen(res.person.grade) )
+      this.data.person.joinCourse = res.person.grade.length;
     }).catch(( err ) => {
       console.log( err );
     });
@@ -30,6 +35,9 @@ class App extends Component {
             <HeadInfo index={1}>
               <i className="icon icon-home"></i>
               <Link to="/person">查看个人信息</Link>
+              <div className="head-info">
+                <p>参加课程</p>
+              </div>
             </HeadInfo>
             <HeadInfo index={2}>
               <i className="icon icon-member"></i>
