@@ -11,18 +11,74 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.data = {};
-    this.data.person = {};
+    this.state = {
+      person: {
+        name: '',
+        studentId: '',
+        joinCourse: 0,
+        qq: '',
+        grade: {
+          c: 0,
+          java: 0,
+          dataBase: 0,
+        },
+      },
+      classCount: {
+        totalCount: 0,
+        maleCount: 0,
+        femaleCount: 0,
+        area: {
+          hubei: 0,
+          unlocal: 0
+        }
+      },
+      course: {
+        list:[]
+      },
+    };
     axios.get('data.json').then(( res ) => {
       res = res.data;
-      console.log( getLen(res.person.grade) )
-      this.data.person.joinCourse = res.person.grade.length;
+      let {name, studentId, grade} = res.person;
+      let {totalCount, maleCount, femaleCount, area} = res.classCount;
+      let {list} = res.course;
+      this.setState({
+        person: {
+          joinCourse: getLen(grade),
+          name,
+          studentId,
+          c: grade.c,
+          java: grade.java,
+          dataBase: grade.dataBase,
+        },
+        classCount: {
+          totalCount,
+          maleCount,
+          femaleCount,
+          area: {
+            hubei: area.hubei,
+            unlocal: (function(){
+              let num = 0;
+              Object.values(area).forEach( n => num += n);
+              return num;
+            }())
+          }
+        },
+        course: {
+          list,
+        }, 
+      });
     }).catch(( err ) => {
       console.log( err );
     });
   }
   
   render() {
+
+    let createList = this.state.course.list.map((val, index) => 
+      <li key={index}>{val}</li>
+    );
+
+
     return (
       <div className="App">
         <header className="App-header">
@@ -36,16 +92,34 @@ class App extends Component {
               <i className="icon icon-home"></i>
               <Link to="/person">查看个人信息</Link>
               <div className="head-info">
-                <p>参加课程</p>
+                <p>姓名:{this.state.person.name}</p>
+                <p>学号:{this.state.person.studentId}</p>
+                <p>参加课程:{this.state.person.joinCourse}</p>
+                <p>c语言成绩:{this.state.person.c}</p>
+                <p>java成绩:{this.state.person.java}</p>
+                <p>数据库成绩:{this.state.person.dataBase}</p>
               </div>
             </HeadInfo>
             <HeadInfo index={2}>
               <i className="icon icon-member"></i>
               <Link to="/member">查看班级成员</Link>
+              <div className="head-info">
+                <p>总人数:{this.state.classCount.totalCount}</p>
+                <p>男生人数:{this.state.classCount.maleCount}</p>
+                <p>女生人数:{this.state.classCount.femaleCount}</p>
+                <p>本地人数:{this.state.classCount.area.hubei}</p>
+                <p>外地人数:{this.state.classCount.area.unlocal}</p>
+              </div>
             </HeadInfo>
             <HeadInfo index={3}>
               <i className="icon icon-course"></i>  
               <Link to="/course">查看已开课程</Link>
+              <div className="head-info">
+                <p>课程列表:</p>
+                 <ul>                                   
+                  {createList}
+                 </ul> 
+              </div>
             </HeadInfo>
          </div>
           <div className="intro-main">
