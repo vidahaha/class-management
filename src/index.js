@@ -11,7 +11,7 @@ import {
 ReactDOM.render((
 	<Router>
 		<Route path="/" component={App}/>
-  	</Router>
+  </Router>
 ), document.getElementById('root'));
 
 //ReactDOM.render(<App />, document.getElementById('root'));

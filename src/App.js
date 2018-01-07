@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import HeadInfo from './block/Intro-head';
+import Chart from './block/chart';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import {getLen} from './util/getLength'
+import { getLen } from './util/getLength'
 
 import './css/App.css';
 
@@ -35,6 +36,7 @@ class App extends Component {
       course: {
         list:[]
       },
+      showChart: false,
     };
     axios.get('data.json').then(( res ) => {
       res = res.data;
@@ -73,11 +75,13 @@ class App extends Component {
   }
   
   render() {
-
     let createList = this.state.course.list.map((val, index) => 
       <li key={index}>{val}</li>
     );
 
+    let chart = this.state.showChart ? <Chart></Chart> : null;
+    let mask = this.state.showChart ? <div className="mask" 
+    onClick={()=>{this.setState({showChart: false})}}></div> : null;    
 
     return (
       <div className="App">
@@ -126,7 +130,7 @@ class App extends Component {
             <div className="main-info">
               <h3>介绍</h3>
               <i className="app-back-1"></i>
-              <p>此系统使用React + JavaBean + Servlet实现对一班、二班学生
+              <p>&emsp;&emsp;此系统使用React + JavaBean + Servlet实现对一班、二班学生
                 信息数据库的集成。达到在不修改后台数据库访问代码的前提下，前
                 台界面通过不同的账号登录进入系统后，可查询对应的相关学生信息
                 的效果。
@@ -135,21 +139,23 @@ class App extends Component {
             <div className="main-support">
               <h3>介绍</h3>
               <i className="app-back-1"></i>
-              <p>此系统使用React + JavaBean + Servlet实现对一班、二班学生
-                信息数据库的集成。达到在不修改后台数据库访问代码的前提下，前
-                台界面通过不同的账号登录进入系统后，可查询对应的相关学生信息
-                的效果。
+              <p>&emsp;&emsp;React 是一个用于构建用户界面的 JAVASCRIPT 库。
+              React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）。
+              React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。
+              React 拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。
               </p>
             </div>
-
           </div>
+          <button className="chart-button" onClick={()=>{this.setState({showChart: true})}}>A-Button-With-No-Sense-Of-Existence</button>
+          {chart}
         </div>
         <footer className="App-footer">
-          <img className="footer-img" src="/app_2.png" alt="logo"/>
+          <img className="footer-img" src="/img/app_2.png" alt="logo"/>
           <p>计科1503黄穗宇   个人博客:
-            <a href="https://vidahaha.github.io">https://vidahaha.github.io</a>
+            <a href="https://vidahaha.github.io" target="blank">https://vidahaha.github.io</a>
           </p>
         </footer>
+        {mask}
       </div>
     );
   }
